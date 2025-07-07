@@ -3,15 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Academic material and useful links for the core subjects of the Department of Computer Science and Engineering, IIT Kharagpur" />
+    <meta name="description" content="CSE 2020: Study materials and resources for Computer Science and Engineering, IIT Kharagpur." />
     <meta name="author" content="garggopal2001" />
     <title>CSE 2020</title>
-    <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="img/GG.png" />
-    <!-- Link to Font Awesome for icons -->
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Link to external stylesheet -->
+    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GQK9TPGLNL"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-GQK9TPGLNL');
+    </script>
 </head>
 <body>
     <header>
@@ -34,12 +42,12 @@
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSden1G9sySVuokDMkI-ARzznm0jVRnQsSUA46GA6xVGxfWiCQ/viewform?embedded=false" target="_blank" class="feedback-btn">
                 <i class="fas fa-comment-dots"></i> Give Feedback
             </a>
-            <p style="color: rgb(182, 8, 8); font-weight: bold; font-family: monospace; font-size: 1.2rem; margin-top: 1.5rem;">
+            <p class="access-note">
                 UsE YoUr InStItUtE AcCoUnT To AcCeSs MaTeRiAl LiNkS<br>(example@kgpian.iitkgp.ac.in)
             </p>
         </section>
 
-        <!-- Home Section -->
+        <!-- Home Section: Displays semester selection -->
         <section id="homeSection" class="content-section">
             <h2 class="section-title">Select Your Semester</h2>
             <div class="semester-grid" id="semesterGrid">
@@ -47,7 +55,7 @@
             </div>
         </section>
 
-        <!-- Courses Section -->
+        <!-- Courses Section: Displays courses for a selected semester -->
         <section id="coursesSection" class="content-section hidden">
             <button class="back-btn" onclick="showHome()">
                 <i class="fas fa-arrow-left"></i> Back to Semesters
@@ -58,7 +66,7 @@
             </div>
         </section>
 
-        <!-- Course Details Section -->
+        <!-- Course Details Section: Displays detailed information for a selected course -->
         <section id="courseDetailsSection" class="content-section hidden">
             <button class="back-btn" onclick="showCourses()">
                 <i class="fas fa-arrow-left"></i> Back to Courses
@@ -68,7 +76,7 @@
             </div>
         </section>
 
-        <!-- Search Results Section -->
+        <!-- Search Results Section: Displays results from the search bar -->
         <section id="searchResultsSection" class="content-section hidden">
             <button class="back-btn" onclick="clearSearch()">
                 <i class="fas fa-arrow-left"></i> Back to Home
@@ -89,7 +97,7 @@
                 </div>
                 <div class="footer-section">
                     <h4>ABOUT ME</h4>
-                    <p>My name is <a class="about" href="http://cse.iitkgp.ac.in/~gopal/" target="_blank">Gopal</a>. I'm a final-year undergraduate student of the Department of Computer Science and Engineering enrolled in its Dual Degree course.</p>
+                    <p>I'm <a class="about" href="http://cse.iitkgp.ac.in/~gopal/" target="_blank">Gopal</a>, a 2025 graduate student from the Department of Computer Science and Engineering at IIT Kharagpur, enrolled in its Dual Degree course.</p>
                 </div>
                 <div class="footer-section">
                     <h4>CONTACT</h4>
@@ -108,7 +116,8 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>Made with <span class="heart"><i class="fa-solid fa-heart"></i></span> for Kgpians.</p>
+                <p>Made with <span class="heart-icon"><i class="fa-solid fa-heart"></i></span> for Kgpians.</p>
+                <p>Developed with the assistance of Sonnet 4 and 2.5 Flash.</p>
             </div>
         </div>
     </footer>

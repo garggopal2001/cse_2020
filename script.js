@@ -1,4 +1,4 @@
-// Sample course data
+// Course data
 const coursesData = [
     // SEM01 M1
     {
@@ -371,7 +371,7 @@ const coursesData = [
                 link: `http://www.chemistry.iitkgp.ac.in/~ndpradeep/ndps.html`
             }
         ],
-        web_b: [
+        vid_b: [
             {
                 name: `Lec_Spr_21`,
                 icon: `fa-brands fa-youtube`,
@@ -400,7 +400,7 @@ const coursesData = [
                 link: `http://www.chemistry.iitkgp.ac.in/~ndpradeep/ndps.html`
             }
         ],
-        web_b: [
+        vid_b: [
             {
                 name: `Lec_Spr_21`,
                 icon: `fa-brands fa-youtube`,
@@ -440,13 +440,6 @@ const coursesData = [
             }
         ],
         vid_b: [
-            // {
-            //     name: `Lec_Spr_22`,
-            //     icon: `fa-brands fa-youtube`,
-            //     link: `https://www.youtube.com/playlist?list=PLO11h2zbAVtN03ygBklEJucko5EDDRhM2`
-            // }
-        ],
-        web_b: [
             {
                 name: `Lec_Spr_21`,
                 icon: `fa-brands fa-youtube`,
@@ -478,13 +471,6 @@ const coursesData = [
                 link: `https://www.youtube.com/playlist?list=PLUfABYNel-fjaNs9EL3nYZUHNFBFb213o`
             },
             {
-                name: `Formula PDFs`,
-                icon: `fa-solid fa-bars-staggered`,
-                link: `https://drive.google.com/drive/folders/1veQlwVt8BFaIU5LFLatA8DjtYe2Gb2MP`
-            }
-        ],
-        web_b: [
-            {
                 name: `Lec_Aut_21 (Prof. SRK)`,
                 icon: `fa-brands fa-youtube`,
                 link: `https://youtube.com/playlist?list=PLUfABYNel-fgh8A2-3mSwEcOTfh10HjoB`
@@ -493,11 +479,20 @@ const coursesData = [
                 name: `Lec_Aut_21 (Prof. BB)`,
                 icon: `fa-brands fa-youtube`,
                 link: `https://youtube.com/playlist?list=PLUfABYNel-fixcX3G2kxpE20zkkqr5lGd`
-            },
+            }
+        ],
+        not_b: [
             {
                 name: `Anubhav Notes`,
                 icon: `fa-solid fa-pen-to-square`,
                 link: `https://drive.google.com/file/d/1c7U4gX2qjUX-h3TNnFIhAOUJYTFZ-yEa/view?usp=drivesdk`
+            }
+        ],
+        oth_b: [
+            {
+                name: `Formula PDFs`,
+                icon: `fa-solid fa-bars-staggered`,
+                link: `https://drive.google.com/drive/folders/1veQlwVt8BFaIU5LFLatA8DjtYe2Gb2MP`
             }
         ],
         mat_b: `https://iitkgpacin-my.sharepoint.com/:f:/g/personal/garggopal2001_kgpian_iitkgp_ac_in/EvZ8zbzlED9GhPzVL5kVaLsBkfB61kOIdz3Qp-KVBQJGuA?e=6bG2Ms`
@@ -520,18 +515,6 @@ const coursesData = [
         ],
         vid_b: [
             {
-                name: `Web_Aut_20`,
-                icon: `fa-solid fa-file-lines`,
-                link: `https://cse.iitkgp.ac.in/~abhij/course/theory/DS/Autumn20/`
-            }
-        ],
-        web_b: [
-            {
-                name: `Web_Aut_21`,
-                icon: `fa-solid fa-file-lines`,
-                link: `https://cse.iitkgp.ac.in/~abhij/course/theory/DS/Autumn21/`
-            },
-            {
                 name: `Discussion Aut_21`,
                 icon: `fa-brands fa-youtube`,
                 link: `https://youtube.com/playlist?list=PLUfABYNel-fgxYnvoadbfGF9EM2HlmCnm`
@@ -540,6 +523,18 @@ const coursesData = [
                 name: `Lec_Aut_21_20`,
                 icon: `fa-brands fa-youtube`,
                 link: `https://youtube.com/playlist?list=PLUfABYNel-fjfaJWNZG5jFXxNH-UVpQwM`
+            }
+        ],
+        web_b: [
+            {
+                name: `Web_Aut_20`,
+                icon: `fa-solid fa-file-lines`,
+                link: `https://cse.iitkgp.ac.in/~abhij/course/theory/DS/Autumn20/`
+            },
+            {
+                name: `Web_Aut_21`,
+                icon: `fa-solid fa-file-lines`,
+                link: `https://cse.iitkgp.ac.in/~abhij/course/theory/DS/Autumn21/`
             }
         ],
         mat_b: `https://iitkgpacin-my.sharepoint.com/:f:/g/personal/garggopal2001_kgpian_iitkgp_ac_in/EqVJiHMGShpBq8cwvozDHQYBGjlO8bqw2WnzLQ831ZNFFg?e=jPIeUk`
@@ -572,51 +567,55 @@ const coursesData = [
                 link: `https://www.youtube.com/playlist?list=PLdo5W4Nhv31bbKJzrsKfMpo_grxuLl8LU`
             },
             {
-                name: `tutorialspoint`,
-                icon: `fa-soild fa-newspaper`,
-                link: `https://www.tutorialspoint.com/data_structures_algorithms/index.htm`
+                name: `Lec_Aut_20`,
+                icon: `fa-brands fa-youtube`,
+                link: `https://www.youtube.com/playlist?list=PLUfABYNel-fiT97ajDdwl6ClgtgId9xy8`
             },
             {
-                name: `javatpoint`,
-                icon: `fa-soild fa-newspaper`,
-                link: `https://www.javatpoint.com/data-structure-tutorial`
-            },
-            {
-                name: `programiz`,
-                icon: `fa-soild fa-newspaper`,
-                link: `https://www.programiz.com/dsa`
-            },
+                name: `Lec_Aut_21`,
+                icon: `fa-brands fa-youtube`,
+                link: `https://youtube.com/playlist?list=PLUfABYNel-fiulSmpgyp0qD-olJ89AvGR`
+            }
+        ],
+        web_b: [
             {
                 name: `Web_Aut_20`,
                 icon: `fa-solid fa-file-lines`,
                 link: `https://cse.iitkgp.ac.in/~pawang/courses/ALGO20.html`
             },
             {
-                name: `Lec_Aut_20`,
-                icon: `fa-brands fa-youtube`,
-                link: `https://www.youtube.com/playlist?list=PLUfABYNel-fiT97ajDdwl6ClgtgId9xy8`
-            },
-            {
                 name: `Web_Spr_21`,
                 icon: `fa-solid fa-file-lines`,
                 link: `https://cse.iitkgp.ac.in/~palash/Courses/2021Algorithms1-Theory/algo1-2021.html`
-            }
-        ],
-        web_b: [
+            },
             {
                 name: `Web_Aut_21`,
                 icon: `fa-solid fa-file-lines`,
                 link: `https://cse.iitkgp.ac.in/~pawang/courses/ALGO21.html`
-            },
-            {
-                name: `Lec_Aut_21`,
-                icon: `fa-brands fa-youtube`,
-                link: `https://youtube.com/playlist?list=PLUfABYNel-fiulSmpgyp0qD-olJ89AvGR`
-            },
+            }
+        ],
+        not_b: [
             {
                 name: `Anubhav Notes`,
                 icon: `fa-solid fa-pen-to-square`,
                 link: `https://drive.google.com/file/d/1VlvCDu0v7TMaF7NZi5YU_QEq8mbuAU-e/view?usp=drivesdk`
+            }
+        ],
+        tut_b: [
+            {
+                name: `tutorialspoint`,
+                icon: `fa-solid fa-newspaper`,
+                link: `https://www.tutorialspoint.com/data_structures_algorithms/index.htm`
+            },
+            {
+                name: `javatpoint`,
+                icon: `fa-solid fa-newspaper`,
+                link: `https://www.javatpoint.com/data-structure-tutorial`
+            },
+            {
+                name: `programiz`,
+                icon: `fa-solid fa-newspaper`,
+                link: `https://www.programiz.com/dsa`
             }
         ],
         mat_b: `https://iitkgpacin-my.sharepoint.com/:f:/g/personal/garggopal2001_kgpian_iitkgp_ac_in/Epci9L8j_zxCugoa0igbZAMBTSnOHw08yZbyoHUH2rQnhg?e=9eEbBt`
@@ -637,19 +636,19 @@ const coursesData = [
                 link: `https://cse.iitkgp.ac.in/~pawang/`
             }
         ],
-        vid_b: [
+        web_b: [
             {
                 name: `Web_Aut_20`,
                 icon: `fa-solid fa-file-lines`,
                 link: `https://cse.iitkgp.ac.in/~pawang/courses/ALGO20.html`
-            }
-        ],
-        web_b: [
+            },
             {
                 name: `Web_Aut_21`,
                 icon: `fa-solid fa-file-lines`,
                 link: `https://cse.iitkgp.ac.in/~pawang/courses/ALGO21.html`
-            },
+            }
+        ],
+        oth_b: [
             {
                 name: `Assignments Code`,
                 icon: `fa-solid fa-code`,
@@ -670,12 +669,14 @@ const coursesData = [
                 link: `https://gduttaengg.wixsite.com/mysite`
             }
         ],
-        web_b: [
+        vid_b: [
             {
                 name: `Lec_Aut_21`,
                 icon: `fa-brands fa-youtube`,
                 link: `https://youtube.com/playlist?list=PLUfABYNel-fjBJFyIaKOpvVkJtV0ZsOQn`
-            },
+            }
+        ],
+        not_b: [
             {
                 name: `Anubhav Notes`,
                 icon: `fa-solid fa-pen-to-square`,
@@ -702,16 +703,16 @@ const coursesData = [
         ],
         vid_b: [
             {
-                name: `Virtual Labs`,
-                icon: `fa-solid fa-flask`,
-                link: `http://vlabs.iitkgp.ernet.in/be/`
-            }
-        ],
-        web_b: [
-            {
                 name: `Lec_Aut_21`,
                 icon: `fa-brands fa-youtube`,
                 link: `https://youtube.com/playlist?list=PLUfABYNel-fiJFw4BuTKpvqsVGctQS2Tt`
+            }
+        ],
+        oth_b: [
+            {
+                name: `Virtual Labs`,
+                icon: `fa-solid fa-flask`,
+                link: `http://vlabs.iitkgp.ernet.in/be/`
             }
         ],
         mat_b: `https://iitkgpacin-my.sharepoint.com/:f:/g/personal/garggopal2001_kgpian_iitkgp_ac_in/Ert4r83qbaBMr6Bo4SaxhfMBO1uIQJPYJrxuNvAA7X8S4g?e=mWCRJB`
@@ -734,6 +735,13 @@ const coursesData = [
         ],
         vid_b: [
             {
+                name: `Lec_Aut_21`,
+                icon: `fa-brands fa-youtube`,
+                link: `https://youtube.com/playlist?list=PLUfABYNel-fi2iFl9AdoNRfaoL7KJLFnP`
+            }
+        ],
+        web_b: [
+            {
                 name: `S&N Web_Aut_18`,
                 icon: `fa-solid fa-file-lines`,
                 link: `http://www.facweb.iitkgp.ac.in/~avishek/Signals&Networks2018.html`
@@ -749,12 +757,7 @@ const coursesData = [
                 link: `http://www.facweb.iitkgp.ac.in/~avishek/Signals&Networks2020.html`
             }
         ],
-        web_b: [
-            {
-                name: `Lec_Aut_21`,
-                icon: `fa-brands fa-youtube`,
-                link: `https://youtube.com/playlist?list=PLUfABYNel-fi2iFl9AdoNRfaoL7KJLFnP`
-            },
+        not_b: [
             {
                 name: `Anubhav Notes`,
                 icon: `fa-solid fa-pen-to-square`,
@@ -781,27 +784,29 @@ const coursesData = [
         ],
         vid_b: [
             {
-                name: `Web_Spr_21`,
-                icon: `fa-solid fa-file-lines`,
-                link: `http://cse.iitkgp.ac.in/~abhij/course/theory/FLAT/Spring21/`
-            },
-            {
                 name: `Lec_Spr_21`,
                 icon: `fa-brands fa-youtube`,
                 link: `https://www.youtube.com/playlist?list=PLO11h2zbAVtMnUJop1EeMSrr6rMYgfXzO`
-            },
-        ],
-        web_b: [
-            {
-                name: `Web_Spr_22`,
-                icon: `fa-solid fa-file-lines`,
-                link: `http://cse.iitkgp.ac.in/~abhij/course/theory/FLAT/Spring22/`
             },
             {
                 name: `Lec_Spr_22`,
                 icon: `fa-brands fa-youtube`,
                 link: `https://youtube.com/playlist?list=PLUfABYNel-fh0oTxzcq3ufHqhLLTJrIge`
+            }
+        ],
+        web_b: [
+            {
+                name: `Web_Spr_21`,
+                icon: `fa-solid fa-file-lines`,
+                link: `http://cse.iitkgp.ac.in/~abhij/course/theory/FLAT/Spring21/`
             },
+            {
+                name: `Web_Spr_22`,
+                icon: `fa-solid fa-file-lines`,
+                link: `http://cse.iitkgp.ac.in/~abhij/course/theory/FLAT/Spring22/`
+            }
+        ],
+        not_b: [
             {
                 name: `Anubhav Notes`,
                 icon: `fa-solid fa-pen-to-square`,
@@ -826,16 +831,18 @@ const coursesData = [
                 link: `http://cse.iitkgp.ac.in/~agupta/`
             }
         ],
+        vid_b: [
+            {
+                name: `Lec_Spr_22`,
+                icon: `fa-brands fa-youtube`,
+                link: `https://youtube.com/playlist?list=PLUfABYNel-fi55A_aRtxlqtxzoHu_7Jg7`
+            }
+        ],
         web_b: [
             {
                 name: `Web_Spr_22`,
                 icon: `fa-solid fa-file-lines`,
                 link: `http://cse.iitkgp.ac.in/~abhij/course/lab/SPL/Spring22/`
-            },
-            {
-                name: `Lec_Spr_22`,
-                icon: `fa-brands fa-youtube`,
-                link: `https://youtube.com/playlist?list=PLUfABYNel-fi55A_aRtxlqtxzoHu_7Jg7`
             }
         ],
         mat_b: `https://iitkgpacin-my.sharepoint.com/:f:/g/personal/garggopal2001_kgpian_iitkgp_ac_in/EuA8mFTDmp9DgKeo5cXczzEBwHKYHwp7r63cpt9XgMEvJg?e=1KViuc`
@@ -863,21 +870,23 @@ const coursesData = [
                 link: `https://www.youtube.com/playlist?list=PLUfABYNel-fggOnaSG_5yhykema2cWLQ7`
             },
             {
-                name: `PPD Sir Slides`,
-                icon: `fa-brands fa-google-drive`,
-                link: `https://drive.google.com/drive/folders/1UACEQlnKq_92fLfkvunpknb5iiRUPpyu`
-            },
+                name: `Lec_Spr_22`,
+                icon: `fa-brands fa-youtube`,
+                link: `https://youtube.com/playlist?list=PLUfABYNel-fjMmCzzPwAwT6VU-EuzhC-C`
+            }
         ],
         web_b: [
             {
                 name: `Web_Spr_22`,
-                icon: `fa-soild fa-file-lines`,
+                icon: `fa-solid fa-file-lines`,
                 link: `https://cse.iitkgp.ac.in/~sourangshu/coursefiles/cs20202_2022s.html`
             },
+        ],
+        not_b: [
             {
-                name: `Lec_Spr_22`,
-                icon: `fa-brands fa-youtube`,
-                link: `https://youtube.com/playlist?list=PLUfABYNel-fjMmCzzPwAwT6VU-EuzhC-C`
+                name: `PPD Sir Slides`,
+                icon: `fa-brands fa-google-drive`,
+                link: `https://drive.google.com/drive/folders/1UACEQlnKq_92fLfkvunpknb5iiRUPpyu`
             },
             {
                 name: `Anubhav Notes`,
@@ -903,16 +912,18 @@ const coursesData = [
                 link: `http://cse.iitkgp.ac.in/~sourangshu/`
             }
         ],
-        web_b: [
-            {
-                name: `Web_Spr_22`,
-                icon: `fa-soild fa-file-lines`,
-                link: `https://cse.iitkgp.ac.in/~sourangshu/coursefiles/cs20202_2022s.html`
-            },
+        vid_b: [
             {
                 name: `Lec_Spr_22`,
                 icon: `fa-brands fa-youtube`,
                 link: `https://youtube.com/playlist?list=PLUfABYNel-fi4ixsxIxpQTm5mAcNGB6dM`
+            }
+        ],
+        web_b: [
+            {
+                name: `Web_Spr_22`,
+                icon: `fa-solid fa-file-lines`,
+                link: `https://cse.iitkgp.ac.in/~sourangshu/coursefiles/cs20202_2022s.html`
             }
         ],
         mat_b: `https://iitkgpacin-my.sharepoint.com/:f:/g/personal/garggopal2001_kgpian_iitkgp_ac_in/EvMujdfpXXJCrHxMK1LA78gBBxFuhp44ZQnYSwuhz5Q_og?e=fr5CAj`
@@ -935,27 +946,29 @@ const coursesData = [
         ],
         vid_b: [
             {
-                name: `Web_Spr_21`,
-                icon: `fa-soild fa-file-lines`,
-                link: `http://cse.iitkgp.ac.in/~wbcm/cgi-bin/wbcm/common/course/home.cgi?ccode=cs21002&year=2021&sem=s`
-            },
-            {
                 name: `Lec_Spr_21`,
                 icon: `fa-brands fa-youtube`,
                 link: `https://www.youtube.com/playlist?list=PLUfABYNel-fi9SuywjNvh9HwUOgPScILx`
-            }
-        ],
-        web_b: [
-            {
-                name: `Web_Spr_22`,
-                icon: `fa-soild fa-file-lines`,
-                link: `http://cse.iitkgp.ac.in/~wbcm/cgi-bin/wbcm/common/course/home.cgi?ccode=cs21002&year=2022&sem=s`
             },
             {
                 name: `Lec_Spr_22`,
                 icon: `fa-brands fa-youtube`,
                 link: `https://youtube.com/playlist?list=PLUfABYNel-fgalHopzsQ34982Braj0s0X`
+            }
+        ],
+        web_b: [
+            {
+                name: `Web_Spr_21`,
+                icon: `fa-solid fa-file-lines`,
+                link: `http://cse.iitkgp.ac.in/~wbcm/cgi-bin/wbcm/common/course/home.cgi?ccode=cs21002&year=2021&sem=s`
             },
+            {
+                name: `Web_Spr_22`,
+                icon: `fa-solid fa-file-lines`,
+                link: `http://cse.iitkgp.ac.in/~wbcm/cgi-bin/wbcm/common/course/home.cgi?ccode=cs21002&year=2022&sem=s`
+            }
+        ],
+        not_b: [
             {
                 name: `Anubhav Notes`,
                 icon: `fa-solid fa-pen-to-square`,
@@ -982,26 +995,26 @@ const coursesData = [
         ],
         vid_b: [
             {
-                name: `Web_Spr_20`,
-                icon: `fa-soild fa-file-lines`,
-                link: `http://cse.iitkgp.ac.in/~wbcm/cgi-bin/wbcm/common/course/home.cgi?ccode=cs29002&year=2020&sem=s`
-            },
-            {
-                name: `Web_Spr_21`,
-                icon: `fa-soild fa-file-lines`,
-                link: `http://cse.iitkgp.ac.in/~wbcm/cgi-bin/wbcm/common/course/home.cgi?ccode=cs29002&year=2021&sem=s`
+                name: `Lec_Spr_22`,
+                icon: `fa-brands fa-youtube`,
+                link: `https://youtube.com/playlist?list=PLUfABYNel-fhH5t4-67f3mCRLwKiBlXNb`
             }
         ],
         web_b: [
             {
-                name: `Web_Spr_22`,
-                icon: `fa-soild fa-file-lines`,
-                link: `http://cse.iitkgp.ac.in/~wbcm/cgi-bin/wbcm/common/course/home.cgi?ccode=cs29002&year=2022&sem=s`
+                name: `Web_Spr_20`,
+                icon: `fa-solid fa-file-lines`,
+                link: `http://cse.iitkgp.ac.in/~wbcm/cgi-bin/wbcm/common/course/home.cgi?ccode=cs29002&year=2020&sem=s`
             },
             {
-                name: `Lec_Spr_22`,
-                icon: `fa-brands fa-youtube`,
-                link: `https://youtube.com/playlist?list=PLUfABYNel-fhH5t4-67f3mCRLwKiBlXNb`
+                name: `Web_Spr_21`,
+                icon: `fa-solid fa-file-lines`,
+                link: `http://cse.iitkgp.ac.in/~wbcm/cgi-bin/wbcm/common/course/home.cgi?ccode=cs29002&year=2021&sem=s`
+            },
+            {
+                name: `Web_Spr_22`,
+                icon: `fa-solid fa-file-lines`,
+                link: `http://cse.iitkgp.ac.in/~wbcm/cgi-bin/wbcm/common/course/home.cgi?ccode=cs29002&year=2022&sem=s`
             }
         ],
         mat_b: `https://iitkgpacin-my.sharepoint.com/:f:/g/personal/garggopal2001_kgpian_iitkgp_ac_in/EqMGUm98YztHn4AmOdseaIkBTCpRj5rPKxxbvvm3-1MyDw?e=6ec5XW`
@@ -1018,7 +1031,7 @@ const coursesData = [
                 link: `http://www.iitkgp.ac.in/department/HS/faculty/hs-jenia`
             }
         ],
-        web_b: [
+        vid_b: [
             {
                 name: `Lec_Spr_22`,
                 icon: `fa-brands fa-youtube`,
@@ -1036,22 +1049,22 @@ const coursesData = [
         prof_b: [
             {
                 name: `Mahendra Prasad Biswal`,
-                link: `http://www.iitkgp.ac.in/department/MA/faculty/ma-mpbiswal`
+                link: `https://scholar.google.co.in/citations?user=z70VTx8AAAAJ&hl=en`
             }
         ],
         vid_b: [
+            {
+                name: `Lec_Spr_22`,
+                icon: `fa-brands fa-youtube`,
+                link: `https://youtube.com/playlist?list=PLUfABYNel-fgG9alFQ-fQE39bLMkpzMIu`
+            },
             {
                 name: `Extra Videos`,
                 icon: `fa-brands fa-youtube`,
                 link: `https://youtube.com/playlist?list=PLUfABYNel-fhTTknZ1W5sHO8kkr97l2MK`
             }
         ],
-        web_b: [
-            {
-                name: `Lec_Spr_22`,
-                icon: `fa-brands fa-youtube`,
-                link: `https://youtube.com/playlist?list=PLUfABYNel-fgG9alFQ-fQE39bLMkpzMIu`
-            },
+        not_b: [
             {
                 name: `Anubhav Notes`,
                 icon: `fa-solid fa-pen-to-square`,
@@ -1078,6 +1091,13 @@ const coursesData = [
         ],
         vid_b: [
             {
+                name: `Lec_Aut_21`,
+                icon: `fa-brands fa-youtube`,
+                link: `https://www.youtube.com/playlist?list=PLO11h2zbAVtMCvIrMguydfHjJnGkRkcum`
+            }
+        ],
+        web_b: [
+            {
                 name: `Web_Aut_20`,
                 icon: `fa-solid fa-file-lines`,
                 link: `http://cse.iitkgp.ac.in/~abhij/course/theory/Algo2/Autumn20/`
@@ -1088,17 +1108,12 @@ const coursesData = [
                 link: `http://cse.iitkgp.ac.in/~abhij/course/theory/Algo2/Autumn21/`
             },
             {
-                name: `Lec_Aut_21`,
-                icon: `fa-brands fa-youtube`,
-                link: `https://www.youtube.com/playlist?list=PLO11h2zbAVtMCvIrMguydfHjJnGkRkcum`
-            }
-        ],
-        web_b: [
-            {
                 name: `Web_Aut_22`,
                 icon: `fa-solid fa-file-lines`,
                 link: `http://cse.iitkgp.ac.in/~abhij/course/theory/Algo2/Autumn22/`
-            },
+            }
+        ],
+        not_b: [
             {
                 name: `Anubhav Notes`,
                 icon: `fa-solid fa-pen-to-square`,
@@ -1135,7 +1150,9 @@ const coursesData = [
                 name: `Web_Aut_22`,
                 icon: `fa-solid fa-file-lines`,
                 link: `http://cse.iitkgp.ac.in/~bivasm/compiler2022.html`
-            },
+            }
+        ],
+        not_b: [
             {
                 name: `Anubhav Notes`,
                 icon: `fa-solid fa-pen-to-square`,
@@ -1209,7 +1226,9 @@ const coursesData = [
                 name: `Web_Aut_22_PostMid`,
                 icon: `fa-solid fa-file-lines`,
                 link: `https://cse.iitkgp.ac.in/~wbcm/cgi-bin/wbcm/common/course/home.cgi?ccode=cs31007&year=2022&sem=a`
-            },
+            }
+        ],
+        not_b: [
             {
                 name: `Anubhav Notes`,
                 icon: `fa-solid fa-pen-to-square`,
@@ -1257,11 +1276,6 @@ const coursesData = [
         ],
         vid_b: [
             {
-                name: `Web_Spr_21`,
-                icon: `fa-solid fa-file-lines`,
-                link: `http://cse.iitkgp.ac.in/~aritrah/course/theory/ML/Spring2021/`
-            },
-            {
                 name: `Lec_Spr_21`,
                 icon: `fa-brands fa-youtube`,
                 link: `https://youtube.com/playlist?list=PLUfABYNel-fiJKjMY84vi6NxKInqvEHBE`
@@ -1270,6 +1284,13 @@ const coursesData = [
                 name: `Lec_Aut_21`,
                 icon: `fa-brands fa-youtube`,
                 link: `https://www.youtube.com/playlist?list=PLUfABYNel-fiYd_7uxBB6sGaR4oR_FoA4`
+            }
+        ],
+        web_b: [
+            {
+                name: `Web_Spr_21`,
+                icon: `fa-solid fa-file-lines`,
+                link: `http://cse.iitkgp.ac.in/~aritrah/course/theory/ML/Spring2021/`
             }
         ],
         mat_b: `https://iitkgpacin-my.sharepoint.com/:f:/g/personal/garggopal2001_kgpian_iitkgp_ac_in/EmvrLciIupVDrTheREsxelwBpi2n9qa9gAcHe6mswfjhuQ?e=CX8VcP`
@@ -1298,7 +1319,7 @@ const coursesData = [
             {
                 name: `Lec_Aut_21`,
                 icon: `fa-brands fa-youtube`,
-                link: `https://www.youtube.com/playlist?list=PLO11h2zbAVtPyJqf9yxiD7C9Q7ugoXlxV`
+                link: `https://youtube.com/playlist?list=PLUfABYNel-fjLqO55XPRRptyuMBbE5Bza&si=jBFaTMFzZ47pBUfK`
             }
         ],
         mat_b: `https://iitkgpacin-my.sharepoint.com/:f:/g/personal/garggopal2001_kgpian_iitkgp_ac_in/Et8PlEh-kN1DmKrsV6l73-kBN4iSCSUeZa6Kt7GZqLc31w?e=q8WcFZ`
@@ -1321,19 +1342,9 @@ const coursesData = [
         ],
         vid_b: [
             {
-                name: `Web_Spr_21`,
-                icon: `fa-solid fa-file-lines`,
-                link: `https://cse.iitkgp.ac.in/~mainack/courses/2020-spring/OS-course/index.html`
-            },
-            {
                 name: `Lec_Spr_21`,
                 icon: `fa-brands fa-youtube`,
                 link: `https://www.youtube.com/playlist?list=PLUfABYNel-fgx_aCcyV6CLFFLNipxY3Ho`
-            },
-            {
-                name: `Web_Spr_22`,
-                icon: `fa-solid fa-file-lines`,
-                link: `https://cse.iitkgp.ac.in/~mainack/courses/2021-spring/OS-course/index.html`
             },
             {
                 name: `Lec_Spr_22`,
@@ -1342,6 +1353,16 @@ const coursesData = [
             }
         ],
         web_b: [
+            {
+                name: `Web_Spr_21`,
+                icon: `fa-solid fa-file-lines`,
+                link: `https://cse.iitkgp.ac.in/~mainack/courses/2020-spring/OS-course/index.html`
+            },
+            {
+                name: `Web_Spr_22`,
+                icon: `fa-solid fa-file-lines`,
+                link: `https://cse.iitkgp.ac.in/~mainack/courses/2021-spring/OS-course/index.html`
+            },
             {
                 name: `Web_Spr_23`,
                 icon: `fa-solid fa-file-lines`,
@@ -1368,6 +1389,13 @@ const coursesData = [
         ],
         vid_b: [
             {
+                name: `Lab Sessions`,
+                icon: `fa-brands fa-youtube`,
+                link: `https://youtube.com/playlist?list=PLUfABYNel-fiBufnqvcTo6OxPoAaDC9v7`
+            }
+        ],
+        web_b: [
+            {
                 name: `Web_Spr_21`,
                 icon: `fa-solid fa-file-lines`,
                 link: `https://cse.iitkgp.ac.in/~mainack/courses/2020-spring/OS-course/index.html`
@@ -1376,19 +1404,12 @@ const coursesData = [
                 name: `Web_Spr_22`,
                 icon: `fa-solid fa-file-lines`,
                 link: `https://cse.iitkgp.ac.in/~mainack/courses/2021-spring/OS-course/index.html`
-            }
-        ],
-        web_b: [
+            },
             {
                 name: `Web_Spr_23`,
                 icon: `fa-solid fa-file-lines`,
                 link: `https://cse.iitkgp.ac.in/~mainack/courses/2022-spring/OS-course/index.html`
             },
-            {
-                name: `Lab Sessions`,
-                icon: `fa-brands fa-youtube`,
-                link: `https://youtube.com/playlist?list=PLUfABYNel-fiBufnqvcTo6OxPoAaDC9v7`
-            }
         ],
         mat_b: `https://iitkgpacin-my.sharepoint.com/:f:/g/personal/garggopal2001_kgpian_iitkgp_ac_in/ElvT69xXHJxGv_dpBslwxjoBH6sTWmODk-3A8L5RgkvV-g?e=hwsJ2p`
     },
@@ -1410,6 +1431,13 @@ const coursesData = [
         ],
         vid_b: [
             {
+                name: `Lec_Spr_22`,
+                icon: `fa-brands fa-youtube`,
+                link: `https://www.youtube.com/playlist?list=PLUfABYNel-fh7SsHUBLlnRuqRDkeuH1Gg`
+            }
+        ],
+        web_b: [
+            {
                 name: `Web_Spr_21`,
                 icon: `fa-solid fa-file-lines`,
                 link: `http://www.facweb.iitkgp.ac.in/~shamik/spring2021/dbms/dbms2021.html`
@@ -1419,13 +1447,6 @@ const coursesData = [
                 icon: `fa-solid fa-file-lines`,
                 link: `http://www.facweb.iitkgp.ac.in/~shamik/spring2022/dbms/dbms2022.html`
             },
-            {
-                name: `Lec_Spr_22`,
-                icon: `fa-brands fa-youtube`,
-                link: `https://www.youtube.com/playlist?list=PLUfABYNel-fh7SsHUBLlnRuqRDkeuH1Gg`
-            }
-        ],
-        web_b: [
             {
                 name: `Web_Spr_23`,
                 icon: `fa-solid fa-file-lines`,
@@ -1450,7 +1471,7 @@ const coursesData = [
                 link: `http://cse.iitkgp.ac.in/~pabitra/`
             }
         ],
-        vid_b: [
+        web_b: [
             {
                 name: `Web_Spr_21`,
                 icon: `fa-solid fa-file-lines`,
@@ -1460,9 +1481,7 @@ const coursesData = [
                 name: `Web_Spr_22`,
                 icon: `fa-solid fa-file-lines`,
                 link: `http://www.facweb.iitkgp.ac.in/~shamik/spring2022/dbms/dbms2022.html`
-            }
-        ],
-        web_b: [
+            },
             {
                 name: `Web_Spr_23`,
                 icon: `fa-solid fa-file-lines`,
@@ -1496,20 +1515,20 @@ const coursesData = [
             {
                 name: `Lec_Spr_22 Prof. AG`,
                 icon: `fa-brands fa-youtube`,
-                link: `https://www.youtube.com/playlist?list=PLO11h2zbAVtN3Z2lQH4CpM_vaKFr41oGI`
+                link: `https://youtube.com/playlist?list=PLUfABYNel-fiA9Jovdcziep21nNWuyurg&si=JaX3ZNcsgfTvfJfy`
             },
+            {
+                name: `Lec_Spr_22 Prof. SM`,
+                icon: `fa-brands fa-youtube`,
+                link: `https://youtube.com/playlist?list=PLUfABYNel-fjBZdt_klFyZR-zZv1D3_23&si=-dg-f0Y7jtb8aYCq`
+            }
+        ],
+        web_b: [
             {
                 name: `Web_Spr_22 Prof. SM`,
                 icon: `fa-solid fa-file-lines`,
                 link: `https://cse.iitkgp.ac.in/~smisra/course/cn.html`
             },
-            {
-                name: `Lec_Spr_22 Prof. SM`,
-                icon: `fa-brands fa-youtube`,
-                link: `https://www.youtube.com/playlist?list=PLO11h2zbAVtNtPW9Myt9otRVQHmuM4nh8`
-            }
-        ],
-        web_b: [
             {
                 name: `Web_Spr_23 Prof. AG`,
                 icon: `fa-solid fa-file-lines`,
@@ -1543,17 +1562,19 @@ const coursesData = [
             {
                 name: `Lec_Spr_22 Prof. AG`,
                 icon: `fa-brands fa-youtube`,
-                link: `https://www.youtube.com/playlist?list=PLO11h2zbAVtONEcGM1qFbn7vDfkCDn59z`
-            },
-            {
-                name: `Web_Spr_22 Prof. SM`,
-                icon: `fa-solid fa-file-lines`,
-                link: `https://cse.iitkgp.ac.in/~smisra/course/cnlabs.html`
+                link: `https://youtube.com/playlist?list=PLUfABYNel-fiN2o7E2UInGz8Bo0vo_qoa&si=hziqjE32j31N06eC`
             },
             {
                 name: `Lec_Spr_22 Prof. SM`,
                 icon: `fa-brands fa-youtube`,
-                link: `https://www.youtube.com/playlist?list=PLO11h2zbAVtNlAzWcvxlchgnDWCKeIwMo`
+                link: `https://youtube.com/playlist?list=PLUfABYNel-fj6UbUVFr-iw8Jzv3eNItBv&si=CqO0_7f5mdKW9xHU`
+            }
+        ],
+        web_b: [
+            {
+                name: `Web_Spr_22 Prof. SM`,
+                icon: `fa-solid fa-file-lines`,
+                link: `https://cse.iitkgp.ac.in/~smisra/course/cnlabs.html`
             }
         ],
         mat_b: `https://iitkgpacin-my.sharepoint.com/:f:/g/personal/garggopal2001_kgpian_iitkgp_ac_in/Eiwlcs7SBCNJrNNAlZ90zjABTR63GaId-W5Xlm1wdAnOAw?e=2X0pQp`
@@ -1574,10 +1595,8 @@ const coursesData = [
             {
                 name: `Lec_Spr_22`,
                 icon: `fa-brands fa-youtube`,
-                link: `https://www.youtube.com/playlist?list=PLO11h2zbAVtMNU42VobghL-gvIi9dnrDl`
-            }
-        ],
-        web_b: [
+                link: `https://youtube.com/playlist?list=PLUfABYNel-fi-aQIwXHKA2212OlcuskKj&si=X_QcbkYtPVrE5Cij`
+            },
             {
                 name: `Online Sessions`,
                 icon: `fa-brands fa-youtube`,
@@ -1602,7 +1621,7 @@ const coursesData = [
             {
                 name: `NPTEL Lec (Prof. RM)`,
                 icon: `fa-brands fa-youtube`,
-                link: `https://archive.nptel.ac.in/courses/106/105/106105224/`
+                link: `https://nptel.ac.in/courses/106105224`
             }
         ],
         mat_b: `https://iitkgpacin-my.sharepoint.com/:f:/g/personal/garggopal2001_kgpian_iitkgp_ac_in/Eh2puwNr1nZEiNRqLzepEYYBKLO4lvZItKA8pK7IIfRRow?e=49UNay`
@@ -1623,7 +1642,7 @@ const coursesData = [
             {
                 name: `Nptel Lec (Prof. SC & Prof. SS)`,
                 icon: `fa-brands fa-youtube`,
-                link: `https://archive.nptel.ac.in/courses/106/105/106105235/`
+                link: `https://nptel.ac.in/courses/106105235`
             },
             {
                 name: `Lec_Aut_21`,
@@ -1664,7 +1683,7 @@ const coursesData = [
             {
                 name: `Lec_Aut_21`,
                 icon: `fa-brands fa-youtube`,
-                link: `https://www.youtube.com/playlist?list=PL4AVR1di7EiV_9Ij7b4WwwW68vSgFoTGM`
+                link: `https://youtube.com/playlist?list=PLUfABYNel-fjN5HfLzH6dHw8SlVWYRPiA&si=ffYakGux8cQ2nf2m`
             }
         ],
         mat_b: `https://iitkgpacin-my.sharepoint.com/:f:/g/personal/garggopal2001_kgpian_iitkgp_ac_in/Eofka2T7tGRHrvjclaRHRYUBNf8gjZ9i1PiyMREr9VABDg?e=AxjsMx`
@@ -1717,7 +1736,7 @@ const coursesData = [
             {
                 name: `NPTEL Lec (Prof. AP)`,
                 icon: `fa-brands fa-youtube`,
-                link: `https://archive.nptel.ac.in/courses/106/105/106105033/`
+                link: `https://nptel.ac.in/courses/106105033`
             }
         ],
         mat_b: `https://iitkgpacin-my.sharepoint.com/:f:/g/personal/garggopal2001_kgpian_iitkgp_ac_in/EpqSvCGMuQZLvoMRg9gfyzMBmVsh6Q3w8OErhLyFIVo53A?e=vrKeod`
@@ -1773,7 +1792,7 @@ const coursesData = [
             {
                 name: `NPTEL Lec (Prof. DM)`,
                 icon: `fa-brands fa-youtube`,
-                link: `https://archive.nptel.ac.in/courses/106/105/106105194/`
+                link: `https://nptel.ac.in/courses/106105194`
             }
         ],
         mat_b: `https://iitkgpacin-my.sharepoint.com/:f:/g/personal/garggopal2001_kgpian_iitkgp_ac_in/EpCUJnG-SWtHrs16zNRdsHkB1-bxVAUC1C9rGvmpy1x-_w?e=8jewCl`
@@ -1804,14 +1823,12 @@ const coursesData = [
                 link: `https://sites.google.com/site/saptarshighosh/`
             }
         ],
-        vid_b: [
+        web_b: [
             {
                 name: `Web_Aut_23`,
                 icon: `fa-solid fa-file-lines`,
                 link: `https://sites.google.com/view/cs60017/home`
-            }
-        ],
-        web_b: [
+            },
             {
                 name: `Web_Aut_24`,
                 icon: `fa-solid fa-file-lines`,
@@ -1838,12 +1855,22 @@ const coursesData = [
         ],
         vid_b: [
             {
+                name: `Lec_Aut_20`,
+                icon: `fa-brands fa-youtube`,
+                link: `https://youtube.com/playlist?list=PLpYI44uZJi6foLXu5JDBI6XMEWHJyIgJN&si=gmCTPv-1n8tIkOw3`
+            },
+            {
+                name: `Lec_Aut_21`,
+                icon: `fa-brands fa-youtube`,
+                link: `https://youtube.com/playlist?list=PLjSFIV2WJbpxID1KiQkbvwauXBEgB7hTa&si=jhHVDX_IUvvRpDLp`
+            },
+        ],
+        web_b: [
+            {
                 name: `Web_Aut_23`,
                 icon: `fa-solid fa-file-lines`,
                 link: `https://panuragreddy.github.io/SDM_2023/`
-            }
-        ],
-        web_b: [
+            },
             {
                 name: `Web_Aut_24`,
                 icon: `fa-solid fa-file-lines`,
@@ -1890,14 +1917,14 @@ const coursesData = [
                 name: `NPTEL Lec (Prof. PG)`,
                 icon: `fa-brands fa-youtube`,
                 link: `https://www.youtube.com/playlist?list=PLJJzI13YAXCHxbVgiFaSI88hj-mRSoMtI`
-            },
+            }
+        ],
+        web_b: [
             {
                 name: `Web_Spr_24`,
                 icon: `fa-solid fa-file-lines`,
                 link: `https://sites.google.com/view/nlp-cs60075/home`
-            }
-        ],
-        web_b: [
+            },
             {
                 name: `Web_Spr_25`,
                 icon: `fa-solid fa-file-lines`,
@@ -1981,7 +2008,7 @@ const coursesData = [
                 link: `http://www.facweb.iitkgp.ac.in/~smsh/`
             }
         ],
-        web_b: [
+        vid_b: [
             {
                 name: `Lec_Spr_22`,
                 icon: `fa-brands fa-youtube`,
@@ -2002,7 +2029,7 @@ const coursesData = [
                 link: `http://www.iitkgp.ac.in/department/MA/faculty/ma-nitin.gupta`
             }
         ],
-        web_b: [
+        vid_b: [
             {
                 name: `Lec_Spr_22`,
                 icon: `fa-brands fa-youtube`,
@@ -2013,96 +2040,100 @@ const coursesData = [
     }
 ];
 
-// Global variables
+// Global variables to keep track of current state
 let currentSemester = null;
 let currentCourse = null;
 
-// Initialize the website
+// Initialize the website when the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', init);
+
+/**
+ * Initializes the website by generating semester buttons and setting up search functionality.
+ */
 function init() {
     generateSemesters();
     setupSearch();
 }
 
-// Generate semester buttons
+/**
+ * Generates and displays semester cards on the home section.
+ * It creates cards for semesters 1-10, plus "Other Depth Electives" (11) and "Other Breadth Electives" (12).
+ */
 function generateSemesters() {
     const semesterGrid = document.getElementById('semesterGrid');
-    semesterGrid.innerHTML = '';
-    
+    semesterGrid.innerHTML = ''; // Clear existing content
+
+    // Loop through semesters 1 to 12 (1-10 for regular, 11 for Depth, 12 for Breadth)
     for (let i = 1; i <= 12; i++) {
         const semesterCard = document.createElement('button');
         semesterCard.className = 'semester-card';
 
         let semesterTitle = `Semester ${i}`;
-        if (i == 1)
-            semesterTitle = `Sem ${i} Phy (Aut 2020)`
-        else if (i == 2)
-            semesterTitle = `Sem ${i} Chem (Spr 2021)`
-        else if (i == 3)
-            semesterTitle += ` (Aut 2021)`
-        else if (i == 4)
-            semesterTitle += ` (Spr 2022)`
-        else if (i == 5)
-            semesterTitle += ` (Aut 2022)`
-        else if (i == 6)
-            semesterTitle += ` (Spr 2023)`
-        else if (i == 7)
-            semesterTitle += ` (Aut 2023)`
-        else if (i == 8)
-            semesterTitle += ` (Spr 2024)`
-        else if (i == 9)
-            semesterTitle += ` (Aut 2024)`
-        else if (i == 10)
-            semesterTitle += ` (Spr 2025)`
-        else if (i == 11)
-            semesterTitle = "Other Depth Electives";
-        else if (i == 12)
-            semesterTitle = "Other Breadth Eletives";
-        
+        // Custom titles for specific semesters
+        if (i === 1) semesterTitle = `Sem ${i} Phy (Aut 2020)`;
+        else if (i === 2) semesterTitle = `Sem ${i} Chem (Spr 2021)`;
+        else if (i === 3) semesterTitle += ` (Aut 2021)`;
+        else if (i === 4) semesterTitle += ` (Spr 2022)`;
+        else if (i === 5) semesterTitle += ` (Aut 2022)`;
+        else if (i === 6) semesterTitle += ` (Spr 2023)`;
+        else if (i === 7) semesterTitle += ` (Aut 2023)`;
+        else if (i === 8) semesterTitle += ` (Spr 2024)`;
+        else if (i === 9) semesterTitle += ` (Aut 2024)`;
+        else if (i === 10) semesterTitle += ` (Spr 2025)`;
+        else if (i === 11) semesterTitle = "Other Depth Electives";
+        else if (i === 12) semesterTitle = "Other Breadth Electives";
+
+        // Filter courses for the current semester
         const coursesInSemester = coursesData.filter(course => course.semester === i);
         const coursesCount = coursesInSemester.length;
 
-        // Get first few course names for display
-        const maxCoursesToList = 10; // Display up to 10 course names
+        // Get first few course names for display in the card
+        const maxCoursesToList = 8; // Display up to 8 course names
         const courseNames = coursesInSemester.map(course => course.name);
         const displayedCourseNames = courseNames.slice(0, maxCoursesToList).join(', ');
         const moreCoursesIndicator = coursesCount > maxCoursesToList ? '...' : '';
 
+        // Populate the semester card with content
         semesterCard.innerHTML = `
             <h3>${semesterTitle}</h3>
             <p>${coursesCount} Courses</p>
             ${coursesCount > 0 ? `<div class="course-list">${displayedCourseNames}${moreCoursesIndicator}</div>` : ''}
         `;
+        // Attach click event listener to show courses for that semester
         semesterCard.onclick = () => showSemesterCourses(i);
         semesterGrid.appendChild(semesterCard);
     }
 }
 
-// Get number of courses for a semester
-function getCoursesCount(semester) {
-    return coursesData.filter(course => course.semester === semester).length;
-}
-
-// Show courses for a specific semester
+/**
+ * Displays the courses belonging to a specific semester.
+ * Hides other sections and populates the course grid.
+ * @param {number} semester - The semester number to display courses for.
+ */
 function showSemesterCourses(semester) {
-    currentSemester = semester;
+    currentSemester = semester; // Update global currentSemester
     const courses = coursesData.filter(course => course.semester === semester);
-    
+
+    // Hide all content sections except the courses section
     document.getElementById('homeSection').classList.add('hidden');
     document.getElementById('coursesSection').classList.remove('hidden');
     document.getElementById('courseDetailsSection').classList.add('hidden');
     document.getElementById('searchResultsSection').classList.add('hidden');
-    
+
+    // Set the title for the courses section
     let semesterDisplayTitle = `${semester === 11 ? 'Depth Elective' : semester === 12 ? 'Breadth Elective' : `Semester ${semester}`} Courses`;
     document.getElementById('coursesTitle').textContent = semesterDisplayTitle;
-    
+
     const courseGrid = document.getElementById('courseGrid');
-    courseGrid.innerHTML = '';
-    
+    courseGrid.innerHTML = ''; // Clear existing course cards
+
+    // Display a message if no courses are available
     if (courses.length === 0) {
-        courseGrid.innerHTML = '<p style="text-align: center; color: #666; font-size: 1.2rem;">No courses available for this semester yet.</p>';
+        courseGrid.innerHTML = '<p style="text-align: center; color: var(--text-light); font-size: 1.2rem;">No courses available for this semester yet.</p>';
         return;
     }
-    
+
+    // Generate course cards for the selected semester
     courses.forEach(course => {
         const courseCard = document.createElement('div');
         courseCard.className = 'course-card';
@@ -2110,27 +2141,33 @@ function showSemesterCourses(semester) {
             <div class="course-name">${course.name}</div>
             <div class="course-code">${course.code}</div>
         `;
+        // Attach click event listener to show details for that course
         courseCard.onclick = () => showCourseDetails(course);
         courseGrid.appendChild(courseCard);
     });
 }
 
-// Show course details
+/**
+ * Displays the detailed information for a selected course.
+ * Hides other sections and populates the course details content.
+ * @param {object} course - The course object containing its details.
+ */
 function showCourseDetails(course) {
-    currentCourse = course;
-    
+    currentCourse = course; // Update global currentCourse
+
+    // Hide all content sections except the course details section
     document.getElementById('homeSection').classList.add('hidden');
     document.getElementById('coursesSection').classList.add('hidden');
     document.getElementById('courseDetailsSection').classList.remove('hidden');
     document.getElementById('searchResultsSection').classList.add('hidden');
-    
+
     const detailsContent = document.getElementById('courseDetailsContent');
     detailsContent.innerHTML = `
         <div class="course-details">
             <h3>${course.name}</h3>
             <p><strong>Course Code:</strong> ${course.code}</p>
             <p><strong>Semester:</strong> ${course.semester === 11 ? 'Depth Elective' : course.semester === 12 ? 'Breadth Elective' : `${course.semester}`}</p>
-            
+
             ${course.prof_b && course.prof_b.length > 0 ? `
             <div class="resource-section">
                 <h4><i class="fas fa-user-tie"></i> Professor(s)</h4>
@@ -2144,7 +2181,7 @@ function showCourseDetails(course) {
                 </div>
             </div>
             ` : ''}
-            
+
             ${course.vid_b && course.vid_b.length > 0 ? `
             <div class="resource-section">
                 <h4><i class="fas fa-video"></i> Videos</h4>
@@ -2153,6 +2190,20 @@ function showCourseDetails(course) {
                         <a href="${video.link}" target="_blank" class="resource-link videos">
                             <i class="${video.icon}"></i>
                             ${video.name}
+                        </a>
+                    `).join('')}
+                </div>
+            </div>
+            ` : ''}
+
+            ${course.web_b && course.web_b.length > 0 ? `
+            <div class="resource-section">
+                <h4><i class="fas fa-globe"></i> Webpages</h4>
+                <div class="resource-links">
+                    ${course.web_b.map(webpage => `
+                        <a href="${webpage.link}" target="_blank" class="resource-link webpages">
+                            <i class="${webpage.icon || 'fas fa-link'}"></i>
+                            ${webpage.name}
                         </a>
                     `).join('')}
                 </div>
@@ -2172,20 +2223,6 @@ function showCourseDetails(course) {
                 </div>
             </div>
             ` : ''}
-            
-            ${course.web_b && course.web_b.length > 0 ? `
-            <div class="resource-section">
-                <h4><i class="fas fa-globe"></i> Webpages</h4>
-                <div class="resource-links">
-                    ${course.web_b.map(webpage => `
-                        <a href="${webpage.link}" target="_blank" class="resource-link webpages">
-                            <i class="${webpage.icon}"></i>
-                            ${webpage.name}
-                        </a>
-                    `).join('')}
-                </div>
-            </div>
-            ` : ''}
 
             ${course.tut_b && course.tut_b.length > 0 ? `
             <div class="resource-section">
@@ -2193,7 +2230,7 @@ function showCourseDetails(course) {
                 <div class="resource-links">
                     ${course.tut_b.map(tutorial => `
                         <a href="${tutorial.link}" target="_blank" class="resource-link tutorials">
-                            <i class="${tutorial.icon}"></i>
+                            <i class="${tutorial.icon || 'fas fa-graduation-cap'}"></i>
                             ${tutorial.name}
                         </a>
                     `).join('')}
@@ -2203,21 +2240,21 @@ function showCourseDetails(course) {
 
             ${course.oth_b && course.oth_b.length > 0 ? `
             <div class="resource-section">
-                <h4><i class="fas fa-archive"></i> Other</h4>
+                <h4><i class="fas fa-archive"></i> Other Resources</h4>
                 <div class="resource-links">
                     ${course.oth_b.map(other => `
                         <a href="${other.link}" target="_blank" class="resource-link others">
-                            <i class="${other.icon}"></i>
+                            <i class="${other.icon || 'fas fa-external-link-alt'}"></i>
                             ${other.name}
                         </a>
                     `).join('')}
                 </div>
             </div>
             ` : ''}
-            
+
             ${course.mat_b ? `
             <div class="resource-section">
-                <h4><i class="fas fa-folder"></i> Course Materials</h4>
+                <h4><i class="fas fa-folder"></i> Course Materials (OneDrive)</h4>
                 <div class="resource-links">
                     <a href="${course.mat_b}" target="_blank" class="resource-link">
                         <i class="fas fa-brands fa-google-drive"></i>
@@ -2230,57 +2267,72 @@ function showCourseDetails(course) {
     `;
 }
 
-// Setup search functionality
+/**
+ * Sets up the search functionality for the search input box.
+ * Implements a debounce mechanism to prevent excessive search calls.
+ */
 function setupSearch() {
     const searchInput = document.getElementById('searchInput');
     let searchTimeout;
-    
+
     searchInput.addEventListener('input', function() {
-        clearTimeout(searchTimeout);
+        clearTimeout(searchTimeout); // Clear previous timeout
         searchTimeout = setTimeout(() => {
             const query = this.value.trim();
             if (query.length > 0) {
-                performSearch(query);
+                performSearch(query); // Perform search if query is not empty
             } else {
-                clearSearch(); // Clear search results if input is empty
+                clearSearch(); // Clear search results and go home if input is empty
             }
-        }, 300); // Debounce search input
+        }, 300); // Debounce time: 300 milliseconds
     });
 }
 
-// Perform search
+/**
+ * Performs a search on the coursesData based on the query.
+ * Matches against course name or course code (case-insensitive).
+ * @param {string} query - The search query string.
+ */
 function performSearch(query) {
-    const results = coursesData.filter(course => 
+    const results = coursesData.filter(course =>
         course.name.toLowerCase().includes(query.toLowerCase()) ||
         course.code.toLowerCase().includes(query.toLowerCase())
     );
-    
+
     displaySearchResults(results, query);
 }
 
-// Display search results
+/**
+ * Displays the search results in the search results section.
+ * @param {Array<object>} results - An array of course objects matching the search query.
+ * @param {string} query - The original search query.
+ */
 function displaySearchResults(results, query) {
+    // Hide all other sections and show search results section
     document.getElementById('homeSection').classList.add('hidden');
     document.getElementById('coursesSection').classList.add('hidden');
     document.getElementById('courseDetailsSection').classList.add('hidden');
-    document.getElementById('searchResultsSection').classList.remove('hidden');
-    
+    document.getElementById('searchResultsSection').classList.add('hidden'); // Ensure this is hidden when results are displayed
+
     const searchResults = document.getElementById('searchResults');
-    
+
+    // Display message if no results found
     if (results.length === 0) {
         searchResults.innerHTML = `
             <div class="search-results">
-                <p style="text-align: center; color: #666; font-size: 1.2rem;">
+                <p style="text-align: center; color: var(--text-light); font-size: 1.2rem;">
                     No courses found for "${query}"
                 </p>
             </div>
         `;
+        document.getElementById('searchResultsSection').classList.remove('hidden'); // Show search results section even if empty
         return;
     }
-    
+
+    // Generate HTML for search results
     searchResults.innerHTML = `
         <div class="search-results">
-            <p style="margin-bottom: 1rem; color: #666;">
+            <p style="margin-bottom: 1rem; color: var(--text-light);">
                 Found ${results.length} course(s) for "${query}"
             </p>
             ${results.map(course => `
@@ -2291,19 +2343,29 @@ function displaySearchResults(results, query) {
             `).join('')}
         </div>
     `;
+    document.getElementById('searchResultsSection').classList.remove('hidden'); // Show search results section
 }
 
-// Navigation functions
+// --- Navigation Functions ---
+
+/**
+ * Shows the home section (semester selection) and hides all other sections.
+ * Resets current semester and course.
+ */
 function showHome() {
     document.getElementById('homeSection').classList.remove('hidden');
     document.getElementById('coursesSection').classList.add('hidden');
     document.getElementById('courseDetailsSection').classList.add('hidden');
     document.getElementById('searchResultsSection').classList.add('hidden');
-    clearSearchInput();
-    currentSemester = null; // Reset current semester when going home
-    currentCourse = null;   // Reset current course when going home
+    clearSearchInput(); // Clear search input when navigating home
+    currentSemester = null; // Reset current semester
+    currentCourse = null;   // Reset current course
 }
 
+/**
+ * Shows the courses for the currently selected semester.
+ * If no semester is selected, it falls back to the home page.
+ */
 function showCourses() {
     if (currentSemester) {
         showSemesterCourses(currentSemester);
@@ -2312,14 +2374,17 @@ function showCourses() {
     }
 }
 
+/**
+ * Clears the search input and navigates back to the home section.
+ */
 function clearSearch() {
     clearSearchInput();
     showHome();
 }
 
+/**
+ * Clears the text in the search input field.
+ */
 function clearSearchInput() {
     document.getElementById('searchInput').value = '';
 }
-
-// Initialize the website when DOM is loaded
-document.addEventListener('DOMContentLoaded', init);
