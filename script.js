@@ -1,5 +1,132 @@
 // Course data
 const coursesData = [
+    // SEM01 M1
+    {
+        name: `Advanced Calculus`,
+        id: `sem01Modal1`,
+        semester: 1,
+        code: `MA11003`,
+        prof_b: [
+            {
+                name: `Chandal Nahak`,
+                link: `http://www.iitkgp.ac.in/department/MA/faculty/ma-cnahak`
+            }
+        ],
+        vid_b: [
+            {
+                name: `NPTEL Lec (Prof. JK)`,
+                icon: `fa-brands fa-youtube`,
+                link: `https://www.youtube.com/playlist?list=PLbRMhDVUMngeVrxtbBz-n8HvP8KAWBpI5`,
+            }
+        ],
+        not_b: [
+            {
+                name: `Anubhav Notes`,
+                icon: `fa-solid fa-pen-to-square`,
+                link: `https://drive.google.com/file/d/15x-fSeU2o0l2o3McMIfTBOGD2WKZjhgn/view?usp=drivesdk`
+            }
+        ],
+        mat_b: `https://iitkgpacin-my.sharepoint.com/:f:/g/personal/garggopal2001_kgpian_iitkgp_ac_in/EuV9MHz3lVBCgZNfzcjX_K4BaOkaDAZjkgeJOhaTo6BwtA?e=GhKHJ9`
+    },
+    // SEM01 M2
+    {
+        name: `DIY Project`,
+        id: `sem01Modal2`,
+        semester: 1,
+        code: `DY17003`,
+        prof_b: [
+            {
+                name: `Vikranth Racherla`,
+                link: `http://www.iitkgp.ac.in/department/ME/faculty/me-vikranth.racherla`
+            },
+            {
+                name: `Sandeep Kumar Reddy`,
+                link: `http://www.iitkgp.ac.in/department/CD/faculty/cd-skreddy`
+            },
+            {
+                name: `Budhaditya Mukherjee`,
+                link: `http://www.smst.iitkgp.ac.in/Smst/facultydetails/smst-bmukherjee`
+            },
+            {
+                name: `Sreeraj Puravankara`,
+                link: `http://www.iitkgp.ac.in/department/ES/faculty/es-sreeraj`
+            }
+        ],
+        vid_b: [
+            {
+                name: `Channel`,
+                icon: `fa-brands fa-youtube`,
+                link: `https://www.youtube.com/channel/UCeWJRb61WvPzRTFN2UsScgg`,
+            }
+        ],
+        mat_b: `https://iitkgpacin-my.sharepoint.com/:f:/g/personal/garggopal2001_kgpian_iitkgp_ac_in/EnjwKZxbaQ9IglZ2TVI7EiIBhIVqdgqMf2SlxXeYP_tBpA?e=9aKJKp`
+    },
+    // SEM01 M3
+    {
+        name: `Physics of Waves`,
+        id: `sem01Modal3`,
+        semester: 1,
+        code: `PH11003`,
+        prof_b: [
+            {
+                name: `Amar Nath Gupta`,
+                link: `http://www.iitkgp.ac.in/department/PH/faculty/ph-ang`
+            }
+        ],
+        vid_b: [
+            {
+                name: `NPTEL Lec (Prof. SB)`,
+                icon: `fa-brands fa-youtube`,
+                link: `https://www.youtube.com/playlist?list=PLoRUNeJAicqa1GgkIsUOKP-VN93rUTqbZ`,
+            },
+            {
+                name: `Lec_Aut_20`,
+                icon: `fa-brands fa-youtube`,
+                link: `https://youtube.com/playlist?list=PLUfABYNel-fiPvHpaoWOgL-OxMd-f5ccK`
+            }
+        ],
+        mat_b: `https://iitkgpacin-my.sharepoint.com/:f:/g/personal/garggopal2001_kgpian_iitkgp_ac_in/Ek0WmhQyOy9LsJXTMNff8S0BlCxYmDqpgsri7p5Oyss8EQ?e=TrvlUJ`
+    },
+    // SEM01 M4
+    {
+        name: `Physics Laboratory`,
+        id: `sem01Modal4`,
+        semester: 1,
+        code: `PH19003`,
+        prof_b: [
+            {
+                name: `Somnath Bharadwaj`,
+                link: `http://www.iitkgp.ac.in/department/PH/faculty/ph-somnath`
+            }
+        ],
+        mat_b: `https://iitkgpacin-my.sharepoint.com/:f:/g/personal/garggopal2001_kgpian_iitkgp_ac_in/EtZITSiJ6M9Km23WHr-moDkBD5Kjl_7DHF0dlnzdbQMLtQ?e=sXUhAR`
+    },
+    // SEM01 M5
+    {
+        name: `Electrical Technology`,
+        id: `sem01Modal5`,
+        semester: 1,
+        code: `EE11003`,
+        prof_b: [
+            {
+                name: `Alok Kanti Deb`,
+                link: `http://www.iitkgp.ac.in/department/EE/faculty/ee-alokkanti`
+            }
+        ],
+        vid_b: [
+            {
+                name: `NPTEL Lec (Prof. DD)`,
+                icon: `fa-brands fa-youtube`,
+                link: `https://www.youtube.com/playlist?list=PLbRMhDVUMngfdEXVcdf_ijj2Eub-UHs_y`,
+            },
+            {
+                name: `Lec_Aut_20`,
+                icon: `fa-brands fa-youtube`,
+                link: `https://youtube.com/playlist?list=PLUfABYNel-fiZwuD6FC3YHQc24fHoP5zb`
+            }
+        ],
+        mat_b: `https://iitkgpacin-my.sharepoint.com/:f:/g/personal/garggopal2001_kgpian_iitkgp_ac_in/EixYbXCSLa9BpObN84j2qWIBFTYMiZ-ZmtqgGnEbuYKEeg?e=CmcjIN`
+    },
     // SEM01 M6
     {
         name: `Basic Engineering Mechanics`,
@@ -1961,7 +2088,7 @@ function generateSemesters() {
         const coursesCount = coursesInSemester.length;
 
         // Get first few course names for display in the card
-        const maxCoursesToList = 8; // Display up to 8 course names
+        const maxCoursesToList = 7; // Display up to 7 course names as per user's observation
         const courseNames = coursesInSemester.map(course => course.name);
         const displayedCourseNames = courseNames.slice(0, maxCoursesToList).join(', ');
         const moreCoursesIndicator = coursesCount > maxCoursesToList ? '...' : '';
@@ -2018,6 +2145,11 @@ function showSemesterCourses(semester) {
         courseCard.onclick = () => showCourseDetails(course);
         courseGrid.appendChild(courseCard);
     });
+
+    // Scroll to the top of the 'coursesSection' after it's displayed
+    // This ensures the "Back to Semesters" button is visible and the user isn't
+    // left looking at the bottom of the previous section.
+    document.getElementById('coursesSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 /**
@@ -2138,6 +2270,9 @@ function showCourseDetails(course) {
             ` : ''}
         </div>
     `;
+    // Scroll to the top of the 'courseDetailsSection' after it's displayed
+    // This ensures the "Back to Courses" button is visible.
+    document.getElementById('courseDetailsSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 /**
@@ -2199,6 +2334,8 @@ function displaySearchResults(results, query) {
                 </p>
             </div>
         `;
+        // Scroll to the top of the search results section even if empty
+        document.getElementById('searchResultsSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
         return;
     }
 
@@ -2216,6 +2353,8 @@ function displaySearchResults(results, query) {
             `).join('')}
         </div>
     `;
+    // Scroll to the top of the search results section
+    document.getElementById('searchResultsSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 // --- Navigation Functions ---
@@ -2232,6 +2371,8 @@ function showHome() {
     clearSearchInput(); // Clear search input when navigating home
     currentSemester = null; // Reset current semester
     currentCourse = null;   // Reset current course
+    // Scroll to the top of the home section
+    document.getElementById('homeSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 /**
