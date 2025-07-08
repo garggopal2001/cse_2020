@@ -194,6 +194,14 @@ main {
     border: 0.0625rem solid var(--border-light); /* 1px */
 }
 
+/* Ensure sections are hidden by default and shown with JS */
+#homeSection.hidden,
+#coursesSection.hidden,
+#courseDetailsSection.hidden,
+#searchResultsSection.hidden {
+    display: none;
+}
+
 .content-section:hover {
     transform: translateY(-0.3125rem); /* 5px */
     box-shadow: 0 0.9375rem 2.5rem var(--shadow-medium); /* 15px 40px */
@@ -243,7 +251,8 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 10rem; /* 160px */
+    /* Fixed height for consistency, allowing course-list to scroll */
+    height: 10rem; /* 160px */
     box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.2); /* 8px 20px */
 }
 
@@ -269,13 +278,14 @@ main {
     font-size: 0.8rem;
     opacity: 0.8;
     margin-top: 0.3125rem; /* 5px */
-    max-height: 3.75rem; /* 60px */
-    overflow-y: auto;
+    flex-grow: 1; /* Allow it to take available space */
+    overflow-y: auto; /* Enable scrolling for overflow */
     -webkit-overflow-scrolling: touch;
     padding: 0 0.3125rem; /* 5px */
     color: rgba(255, 255, 255, 0.9);
 }
 
+/* Custom scrollbar for better aesthetics */
 .semester-card .course-list::-webkit-scrollbar {
     width: 0.3125rem; /* 5px */
 }
@@ -306,6 +316,9 @@ main {
     transition: all var(--transition-speed) ease;
     cursor: pointer;
     box-shadow: 0 0.25rem 0.9375rem var(--shadow-light); /* 4px 15px */
+    display: flex; /* Use flexbox for content alignment */
+    flex-direction: column;
+    justify-content: space-between; /* Push code to bottom if needed */
 }
 
 .course-card:hover {
@@ -516,10 +529,10 @@ main {
     font-weight: 500;
 }
 
-/* Hidden class */
-.hidden {
+/* Hidden class - removed from HTML and controlled by JS for smooth transitions */
+/* .hidden {
     display: none;
-}
+} */
 
 /* Footer Styles */
 footer {
@@ -673,6 +686,7 @@ footer {
     .semester-card {
         padding: 0.9375rem; /* 15px */
         min-height: 8.75rem; /* 140px */
+        height: 8.75rem; /* Ensure consistent height */
     }
 
     .semester-card h3 {
@@ -794,6 +808,7 @@ footer {
     .semester-card {
         padding: 0.625rem; /* 10px */
         min-height: 7.5rem; /* 120px */
+        height: 7.5rem; /* Ensure consistent height */
     }
 
     .semester-card h3 {
@@ -806,7 +821,6 @@ footer {
 
     .semester-card .course-list {
         font-size: 0.65rem;
-        max-height: 2.5rem; /* 40px */
     }
 
     .course-grid {

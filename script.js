@@ -2051,8 +2051,9 @@ document.addEventListener('DOMContentLoaded', init);
  * Initializes the website by generating semester buttons and setting up search functionality.
  */
 function init() {
-    generateSemesters();
-    setupSearch();
+    generateSemesters(); // Generate semester cards on load
+    setupSearch();       // Setup search input event listener
+    showHome();          // Display the home section initially
 }
 
 /**
@@ -2069,7 +2070,7 @@ function generateSemesters() {
         semesterCard.className = 'semester-card';
 
         let semesterTitle = `Semester ${i}`;
-        // Custom titles for specific semesters
+        // Custom titles for specific semesters (as per your original script)
         if (i === 1) semesterTitle = `Sem ${i} Phy (Aut 2020)`;
         else if (i === 2) semesterTitle = `Sem ${i} Chem (Spr 2021)`;
         else if (i === 3) semesterTitle += ` (Aut 2021)`;
@@ -2088,7 +2089,7 @@ function generateSemesters() {
         const coursesCount = coursesInSemester.length;
 
         // Get first few course names for display in the card
-        const maxCoursesToList = 7; // Display up to 7 course names as per user's observation
+        const maxCoursesToList = 8; // Display up to 8 course names
         const courseNames = coursesInSemester.map(course => course.name);
         const displayedCourseNames = courseNames.slice(0, maxCoursesToList).join(', ');
         const moreCoursesIndicator = coursesCount > maxCoursesToList ? '...' : '';
@@ -2106,65 +2107,68 @@ function generateSemesters() {
 }
 
 /**
+ * Hides all main content sections by adding the 'hidden' class.
+ */
+function hideAllSections() {
+    document.getElementById('homeSection').classList.add('hidden');
+    document.getElementById('coursesSection').classList.add('hidden');
+    document.getElementById('courseDetailsSection').classList.add('hidden');
+    document.getElementById('searchResultsSection').classList.add('hidden');
+}
+
+/**
  * Displays the courses belonging to a specific semester.
  * Hides other sections and populates the course grid.
  * @param {number} semester - The semester number to display courses for.
  */
 function showSemesterCourses(semester) {
+    hideAllSections(); // Hide all sections first
     currentSemester = semester; // Update global currentSemester
-    const courses = coursesData.filter(course => course.semester === semester);
+    currentCourse = null;   // Reset current course when changing semester
 
-    // Hide all content sections except the courses section
-    document.getElementById('homeSection').classList.add('hidden');
-    document.getElementById('coursesSection').classList.remove('hidden');
-    document.getElementById('courseDetailsSection').classList.add('hidden');
-    document.getElementById('searchResultsSection').classList.add('hidden');
+    const courses = coursesData.filter(course => course.semester === semester);
+    const courseGrid = document.getElementById('courseGrid'); // Corrected ID
+    const coursesTitle = document.getElementById('coursesTitle'); // Corrected ID
 
     // Set the title for the courses section
     let semesterDisplayTitle = `${semester === 11 ? 'Depth Elective' : semester === 12 ? 'Breadth Elective' : `Semester ${semester}`} Courses`;
-    document.getElementById('coursesTitle').textContent = semesterDisplayTitle;
+    coursesTitle.textContent = semesterDisplayTitle;
 
-    const courseGrid = document.getElementById('courseGrid');
     courseGrid.innerHTML = ''; // Clear existing course cards
 
     // Display a message if no courses are available
     if (courses.length === 0) {
         courseGrid.innerHTML = '<p style="text-align: center; color: var(--text-light); font-size: 1.2rem;">No courses available for this semester yet.</p>';
-        return;
+    } else {
+        // Generate course cards for the selected semester
+        courses.forEach(course => {
+            const courseCard = document.createElement('div');
+            courseCard.className = 'course-card';
+            courseCard.innerHTML = `
+                <div class="course-name">${course.name}</div>
+                <div class="course-code">${course.code}</div>
+            `;
+            // Attach click event listener to show details for that course
+            // JSON.stringify is used to safely pass the object as a string to the onclick attribute
+            courseCard.onclick = () => showCourseDetails(JSON.stringify(course).replace(/"/g, '&quot;'));
+            courseGrid.appendChild(courseCard);
+        });
     }
 
-    // Generate course cards for the selected semester
-    courses.forEach(course => {
-        const courseCard = document.createElement('div');
-        courseCard.className = 'course-card';
-        courseCard.innerHTML = `
-            <div class="course-name">${course.name}</div>
-            <div class="course-code">${course.code}</div>
-        `;
-        // Attach click event listener to show details for that course
-        courseCard.onclick = () => showCourseDetails(course);
-        courseGrid.appendChild(courseCard);
-    });
-
-    // Scroll to the top of the 'coursesSection' after it's displayed
-    // This ensures the "Back to Semesters" button is visible and the user isn't
-    // left looking at the bottom of the previous section.
-    document.getElementById('coursesSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    document.getElementById('coursesSection').classList.remove('hidden'); // Show the courses section
+    window.scrollTo(0, 0); // Scroll to the top of the page for better UX
 }
 
 /**
  * Displays the detailed information for a selected course.
  * Hides other sections and populates the course details content.
- * @param {object} course - The course object containing its details.
+ * @param {string} courseJsonString - The JSON string of the course object containing its details.
  */
-function showCourseDetails(course) {
-    currentCourse = course; // Update global currentCourse
+function showCourseDetails(courseJsonString) {
+    hideAllSections(); // Hide all sections first
+    const course = JSON.parse(courseJsonString); // Parse the JSON string back to an object
 
-    // Hide all content sections except the course details section
-    document.getElementById('homeSection').classList.add('hidden');
-    document.getElementById('coursesSection').classList.add('hidden');
-    document.getElementById('courseDetailsSection').classList.remove('hidden');
-    document.getElementById('searchResultsSection').classList.add('hidden');
+    currentCourse = course; // Update global currentCourse
 
     const detailsContent = document.getElementById('courseDetailsContent');
     detailsContent.innerHTML = `
@@ -2270,9 +2274,9 @@ function showCourseDetails(course) {
             ` : ''}
         </div>
     `;
-    // Scroll to the top of the 'courseDetailsSection' after it's displayed
-    // This ensures the "Back to Courses" button is visible.
-    document.getElementById('courseDetailsSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    document.getElementById('courseDetailsSection').classList.remove('hidden'); // Show the course details section
+    window.scrollTo(0, 0); // Scroll to the top of the page for better UX
 }
 
 /**
@@ -2287,11 +2291,7 @@ function setupSearch() {
         clearTimeout(searchTimeout); // Clear previous timeout
         searchTimeout = setTimeout(() => {
             const query = this.value.trim();
-            if (query.length > 0) {
-                performSearch(query); // Perform search if query is not empty
-            } else {
-                clearSearch(); // Clear search results and go home if input is empty
-            }
+            performSearch(query); // Perform search if query is not empty
         }, 300); // Debounce time: 300 milliseconds
     });
 }
@@ -2302,46 +2302,26 @@ function setupSearch() {
  * @param {string} query - The search query string.
  */
 function performSearch(query) {
+    const searchResultsDiv = document.getElementById('searchResults'); // Corrected ID
+    const noResultsMessage = document.getElementById('noSearchResults'); // Corrected ID
+
+    // Filter courses based on query
     const results = coursesData.filter(course =>
         course.name.toLowerCase().includes(query.toLowerCase()) ||
         course.code.toLowerCase().includes(query.toLowerCase())
     );
 
-    displaySearchResults(results, query);
-}
+    hideAllSections(); // Hide all sections first
+    document.getElementById('searchResultsSection').classList.remove('hidden'); // Show search results section
+    window.scrollTo(0, 0); // Scroll to top
 
-/**
- * Displays the search results in the search results section.
- * @param {Array<object>} results - An array of course objects matching the search query.
- * @param {string} query - The original search query.
- */
-function displaySearchResults(results, query) {
-    // Hide all other sections and show search results section
-    document.getElementById('homeSection').classList.add('hidden');
-    document.getElementById('coursesSection').classList.add('hidden');
-    document.getElementById('courseDetailsSection').classList.add('hidden');
-    // Ensure searchResultsSection is shown after content is ready
-    document.getElementById('searchResultsSection').classList.remove('hidden');
-
-    const searchResults = document.getElementById('searchResults');
-
-    // Display message if no results found
+    // Display results or no results message
     if (results.length === 0) {
-        searchResults.innerHTML = `
-            <div class="search-results">
-                <p style="text-align: center; color: var(--text-light); font-size: 1.2rem;">
-                    No courses found for "${query}"
-                </p>
-            </div>
-        `;
-        // Scroll to the top of the search results section even if empty
-        document.getElementById('searchResultsSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
-        return;
-    }
-
-    // Generate HTML for search results
-    searchResults.innerHTML = `
-        <div class="search-results">
+        searchResultsDiv.innerHTML = ''; // Clear previous results
+        noResultsMessage.classList.remove('hidden'); // Show no results message
+    } else {
+        noResultsMessage.classList.add('hidden'); // Hide no results message
+        searchResultsDiv.innerHTML = `
             <p style="margin-bottom: 1rem; color: var(--text-light);">
                 Found ${results.length} course(s) for "${query}"
             </p>
@@ -2351,10 +2331,8 @@ function displaySearchResults(results, query) {
                     <div class="course-code">${course.code} - ${course.semester === 11 ? 'Depth Elective' : course.semester === 12 ? 'Breadth Elective' : `Semester ${course.semester}`}</div>
                 </div>
             `).join('')}
-        </div>
-    `;
-    // Scroll to the top of the search results section
-    document.getElementById('searchResultsSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        `;
+    }
 }
 
 // --- Navigation Functions ---
@@ -2364,20 +2342,17 @@ function displaySearchResults(results, query) {
  * Resets current semester and course.
  */
 function showHome() {
+    hideAllSections(); // Ensure all sections are hidden first
     document.getElementById('homeSection').classList.remove('hidden');
-    document.getElementById('coursesSection').classList.add('hidden');
-    document.getElementById('courseDetailsSection').classList.add('hidden');
-    document.getElementById('searchResultsSection').classList.add('hidden');
     clearSearchInput(); // Clear search input when navigating home
     currentSemester = null; // Reset current semester
     currentCourse = null;   // Reset current course
-    // Scroll to the top of the home section
-    document.getElementById('homeSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    window.scrollTo(0, 0); // Scroll to top of the page
 }
 
 /**
  * Shows the courses for the currently selected semester.
- * If no semester is selected, it falls back to the home page.
+ * If no semester is selected (e.g., direct navigation or error), it falls back to the home page.
  */
 function showCourses() {
     if (currentSemester) {
