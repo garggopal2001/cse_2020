@@ -1690,7 +1690,7 @@ const coursesData = [
     },
     // SEM07 M4
     {
-        name: `Intercltural Communication`,
+        name: `Intercultural Communication`,
         id: `sem07Modal4`,
         semester: 7,
         code: `HS30036`,
@@ -2312,7 +2312,8 @@ function displaySearchResults(results, query) {
     document.getElementById('homeSection').classList.add('hidden');
     document.getElementById('coursesSection').classList.add('hidden');
     document.getElementById('courseDetailsSection').classList.add('hidden');
-    document.getElementById('searchResultsSection').classList.add('hidden'); // Ensure this is hidden when results are displayed
+    // Ensure searchResultsSection is shown after content is ready
+    document.getElementById('searchResultsSection').classList.remove('hidden');
 
     const searchResults = document.getElementById('searchResults');
 
@@ -2325,7 +2326,6 @@ function displaySearchResults(results, query) {
                 </p>
             </div>
         `;
-        document.getElementById('searchResultsSection').classList.remove('hidden'); // Show search results section even if empty
         return;
     }
 
@@ -2343,7 +2343,6 @@ function displaySearchResults(results, query) {
             `).join('')}
         </div>
     `;
-    document.getElementById('searchResultsSection').classList.remove('hidden'); // Show search results section
 }
 
 // --- Navigation Functions ---
