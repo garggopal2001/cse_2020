@@ -2039,7 +2039,6 @@ const coursesData = [
         mat_b: `https://iitkgpacin-my.sharepoint.com/:f:/g/personal/garggopal2001_kgpian_iitkgp_ac_in/EnJBGiHKmfJOvhzkDMraqncBuEd3QMD6fQzYJXC-aue4ww?e=Il7NSr`
     }
 ];
-
 // Global variables to keep track of current state
 let currentSemester = null;
 let currentCourse = null;
@@ -2065,6 +2064,8 @@ function generateSemesters() {
     semesterGrid.innerHTML = ''; // Clear existing content
 
     // Loop through semesters 1 to 12 (1-10 for regular, 11 for Depth, 12 for Breadth)
+    // Note: If you only have data for a few semesters, only those will show courses.
+    // The cards for empty semesters will still appear but indicate 0 courses.
     for (let i = 1; i <= 12; i++) {
         const semesterCard = document.createElement('button');
         semesterCard.className = 'semester-card';
@@ -2127,8 +2128,8 @@ function showSemesterCourses(semester) {
     currentCourse = null;   // Reset current course when changing semester
 
     const courses = coursesData.filter(course => course.semester === semester);
-    const courseGrid = document.getElementById('courseGrid'); // Corrected ID
-    const coursesTitle = document.getElementById('coursesTitle'); // Corrected ID
+    const courseGrid = document.getElementById('courseGrid');
+    const coursesTitle = document.getElementById('coursesTitle');
 
     // Set the title for the courses section
     let semesterDisplayTitle = `${semester === 11 ? 'Depth Elective' : semester === 12 ? 'Breadth Elective' : `Semester ${semester}`} Courses`;
@@ -2149,8 +2150,8 @@ function showSemesterCourses(semester) {
                 <div class="course-code">${course.code}</div>
             `;
             // Attach click event listener to show details for that course
-            // JSON.stringify is used to safely pass the object as a string to the onclick attribute
-            courseCard.onclick = () => showCourseDetails(JSON.stringify(course).replace(/"/g, '&quot;'));
+            // Pass only the course ID, then find the course object in showCourseDetails
+            courseCard.onclick = () => showCourseDetails(course.id);
             courseGrid.appendChild(courseCard);
         });
     }
@@ -2162,11 +2163,18 @@ function showSemesterCourses(semester) {
 /**
  * Displays the detailed information for a selected course.
  * Hides other sections and populates the course details content.
- * @param {string} courseJsonString - The JSON string of the course object containing its details.
+ * @param {string} courseId - The ID of the course to display details for.
  */
-function showCourseDetails(courseJsonString) {
+function showCourseDetails(courseId) {
     hideAllSections(); // Hide all sections first
-    const course = JSON.parse(courseJsonString); // Parse the JSON string back to an object
+    // Find the course object by its ID in the coursesData array
+    const course = coursesData.find(c => c.id === courseId);
+
+    if (!course) {
+        console.error('Course not found with ID:', courseId);
+        showHome(); // Fallback to home if course not found
+        return;
+    }
 
     currentCourse = course; // Update global currentCourse
 
@@ -2302,8 +2310,8 @@ function setupSearch() {
  * @param {string} query - The search query string.
  */
 function performSearch(query) {
-    const searchResultsDiv = document.getElementById('searchResults'); // Corrected ID
-    const noResultsMessage = document.getElementById('noSearchResults'); // Corrected ID
+    const searchResultsDiv = document.getElementById('searchResults');
+    const noResultsMessage = document.getElementById('noSearchResults');
 
     // Filter courses based on query
     const results = coursesData.filter(course =>
@@ -2326,7 +2334,7 @@ function performSearch(query) {
                 Found ${results.length} course(s) for "${query}"
             </p>
             ${results.map(course => `
-                <div class="search-result-item" onclick="showCourseDetails(${JSON.stringify(course).replace(/"/g, '&quot;')})">
+                <div class="search-result-item" onclick="showCourseDetails('${course.id}')">
                     <div class="course-name">${course.name}</div>
                     <div class="course-code">${course.code} - ${course.semester === 11 ? 'Depth Elective' : course.semester === 12 ? 'Breadth Elective' : `Semester ${course.semester}`}</div>
                 </div>
